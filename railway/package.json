@@ -1,0 +1,31 @@
+{
+  "name": "destructnote-backend",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development bun run --hot src/index.ts",
+    "build": "prisma generate && bun build src/index.ts --outdir dist --target bun",
+    "start": "NODE_ENV=production bun run src/index.ts",
+    "postinstall": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:push": "prisma db push",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^6.17.1"
+  },
+  "peerDependencies": {
+    "typescript": "5.8.3"
+  },
+  "dependencies": {
+    "@better-auth/expo": "^1.4.7",
+    "@hono/node-server": "1.12.0",
+    "@hono/zod-validator": "0.7.3",
+    "@prisma/client": "^6.17.1",
+    "better-auth": "^1.4.7",
+    "hono": "4.6.0",
+    "zod": "4.1.11"
+  }
+}
