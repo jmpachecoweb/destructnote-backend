@@ -4,7 +4,7 @@ import * as path from "node:path";
 import { randomUUID } from "node:crypto";
 import { type AppType } from "../types";
 import { zValidator } from "@hono/zod-validator";
-import { uploadImageRequestSchema, type UploadImageResponse } from "@/shared/contracts";
+import { uploadImageRequestSchema, type UploadImageResponse } from "../shared/contracts";
 
 // ============================================
 // Uploads directory setup

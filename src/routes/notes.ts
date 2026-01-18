@@ -8,7 +8,7 @@ import {
   type NoteErrorResponse,
   type NoteUsageResponse,
   type UpgradeResponse,
-} from "@/shared/contracts";
+} from "../shared/contracts";
 import { type AppType } from "../types";
 import { db } from "../db";
 import { hasActivePremium, isRevenueCatConfigured } from "../lib/revenuecat";

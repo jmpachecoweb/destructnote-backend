@@ -4,7 +4,7 @@ import {
   type GetSampleResponse,
   postSampleRequestSchema,
   type PostSampleResponse,
-} from "@/shared/contracts";
+} from "../shared/contracts";
 import { type AppType } from "../types";
 
 // Sample routes demonstrating common patterns
