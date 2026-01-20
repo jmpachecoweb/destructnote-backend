@@ -735,9 +735,6 @@ const server = serve({ fetch: app.fetch, port: Number(env.PORT) }, () => {
 const shutdown = async () => {
   console.log("Shutting down server...");
   await db.$disconnect();
-  await db.$connect();
-  await db.$queryRawUnsafe("PRAGMA wal_checkpoint(TRUNCATE)");
-  await db.$disconnect();
   console.log("Successfully shutdown server");
   server.close();
   process.exit(0);
