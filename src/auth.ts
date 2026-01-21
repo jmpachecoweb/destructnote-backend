@@ -24,7 +24,7 @@ import { db } from "./db";
 console.log("🔐 [Auth] Initializing Better Auth...");
 export const auth = betterAuth({
   database: prismaAdapter(db, {
-    provider: "sqlite",
+    provider: "postgresql",
   }),
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.BACKEND_URL,
